@@ -1,10 +1,10 @@
-# gta6-meme-tortillas
+# gta6-meme-2013
 
 [![make.fun · gta6-meme-x-01](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 [![rank](https://make.fun/badge/gta6-meme-x-01/josecasasgomez7-dot/gta6-meme-tortillas/rank.svg)](https://make.fun/bounty/gta6-meme-x-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 [![reward](https://make.fun/badge/gta6-meme-x-01/josecasasgomez7-dot/gta6-meme-tortillas/reward.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 
-A GTA 6 launch-day meme: waited 13 years for GTA 6, launch day finally comes… and mom sends me out for tortillas. The make.fun ghost joins the scene at the door, holding its magenta star. Posted on X from @jose544gutsvif for make.fun's "Post a GTA 6 meme on X" bounty.
+A GTA 6 launch-day meme: me in 2013, 'When GTA 6 comes out I'll be an adult' — me in 2026, an adult, asking permission to play. The make.fun ghost sits on the couch beside him, holding its magenta star. Posted on X from @jose544gutsvif for make.fun's "Post a GTA 6 meme on X" bounty.
 
 ## The meme
 
