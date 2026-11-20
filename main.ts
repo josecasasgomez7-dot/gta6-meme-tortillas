@@ -7,7 +7,7 @@
 //
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const botDir = process.env.MAKEFUN_BOT_DIR ?? '/bot';
@@ -17,6 +17,24 @@ mkdirSync(outputDir, { recursive: true });
 
 const source = join(botDir, 'POST.json');
 const target = join(outputDir, 'POST.json');
+
+// Validate POST.json before handing it to the gate: it must be valid JSON
+// with a string `url` pointing at an X status, so a bad entry fails loudly
+// here instead of silently reaching the judge with no post to read.
+let postUrl: unknown;
+try {
+  postUrl = (JSON.parse(readFileSync(source, 'utf8')) as { url?: unknown }).url;
+} catch (error) {
+  console.error(`Invalid POST.json at ${source}: ${(error as Error).message}`);
+  process.exit(1);
+}
+
+if (typeof postUrl !== 'string' || !/^https:\/\/x\.com\/[A-Za-z0-9_]+\/status\/\d+$/.test(postUrl)) {
+  console.error(`Invalid POST.json at ${source}: "url" must be an X status URL (https://x.com/<handle>/status/<id>), got: ${JSON.stringify(postUrl)}`);
+  process.exit(1);
+}
+
+console.log(`Handing post to the gate: ${postUrl}`);
 
 try {
   copyFileSync(source, target);
